@@ -1,1 +1,2 @@
 This is the telnet server for leadnet
+It will link to the client using telnet
