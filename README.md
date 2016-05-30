@@ -1,8 +1,11 @@
 # leadnet
-Leadnet is a telnet-based cloud productivity suite.  This repository holds both client and server portions.
+Leadnet is a telnet-based cloud productivity suite for Linux.  This repository holds both client and server portions.
 
 ## Project Plan
 The project consists of the Server side and the Client side.
+
+![Project Diagram](LeadnetDiagram.png)
+
 ### Server Side
 The server side consists of the following components:
 
