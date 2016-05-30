@@ -5,6 +5,7 @@ Leadnet is a telnet-based cloud productivity suite.  This repository holds both 
 The project consists of the Server side and the Client side.
 ### Server Side
 The server side consists of the following components:
+
 1. The Leadnet Server - this is a telnet server that allows the user to login, then gives them a choice of applications.  It then redirects I/O streams to/from the program that handles the chosen application.  Applications should block ^Z signals for security reasons.
 2. LeadText - this is a full command-line word processor (loosely based on ProText).
 3. LeadCalc - this is a command-line spreadsheet program.
@@ -16,12 +17,13 @@ The server side consists of the following components:
 7. An FTP server - probably use an existing FTP server.  This is so users can access their documents directly if necessary.  They *will* be able to download their files using Telnet Binary transfer anyway, but this will provide another method to do so that will not require a special client.
 
 Possble other components to include server-side:
+
 8. LeadBBS - a Bulletin Board System so users can communicate and possibly discuss collaborations.
 9. LeadDirectory - a directory project consisting of:
   * A Telnet Directory - a telnet accessible and searchable directory of other Telnet servers providing useful services.
   * A Gopher Directory - a gopher accessible and searchable (using type 7 scripts) directory of Telnet servers and gopher servers providing useful services.
 
 ### Client Side
-The client side primarily consists of the Leadnet Client.  This is a Telnet client that can have multiple connections at a time using tabs (like a modern web-browser, but for Telnet).  Telnet Binary transfers are automatically downloaded to a set download directory, so users can save their documents locally if needed (this is useful for downlading .ps files for printing).  The escape character ^] (\035) allows users to use the arrow keys to move the cursor around the screen and select parts of the display to save, or to select a displayed URI to open in another tab or a separate program.  Other programs can be set up as the default for handling non-Telnet URIs.  Ones likely to be needed are those for gopher, SSH, FTP and WWW.  These should not need to be built by the project-team as there should be many options for each.
+The client side primarily consists of the Leadnet Client.  This is a Telnet client that can have multiple connections at a time using tabs (like a modern web-browser, but for Telnet).  Telnet Binary transfers are automatically downloaded to a set download directory, so users can save their documents locally if needed (this is useful for downlading .ps files for printing).  The escape character ^] (\035) allows users to use the arrow keys to move the cursor around the screen and select parts of the display to save, or to select a displayed URI to open in another tab or a separate program.  Other programs can be set up as the default for handling non-Telnet URIs.  Ones likely to be needed are those for gopher, SSH, FTP and the web.  These should not need to be built by the project-team as there should be many options for each.
 There could be a LeadOS for running the client (ideally configured to open it on boot), but any lightweight command-line version of Linux will do.  Core (previously MicroCore) would be a good possibility, though the download folder should then be located directly on the HDD rather than in the home directory in order to allow a system running it to boot quickly.
 The Ideal scenario would be to eventually create a "LeadBook" - a small laptop running whatever is eventually chosen as the LeadOS, that boots directly into the Leadnet Client, for use as a cheap productivity machine for remote working.  This, however, would be an expensive part of the project and not required by users as the Leadnet Client should work on all Linux systems (if not as many other UNIX-like systems as possible).
