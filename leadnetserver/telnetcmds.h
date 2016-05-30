@@ -1,0 +1,80 @@
+#ifndef __TELNETCMDS_H__
+
+#define __TELNETCMDS_H__
+
+
+#define SUBEND 240
+#define NOOP 241
+#define DMARK 242
+#define BREAK 243
+#define IPROC 244
+#define AOUT 245
+#define AYOUT 246
+#define ECHAR 247
+#define ELINE 248
+#define GOAHD 249
+#define SUBB 250
+#define SWILL 251
+#define SWONT 252
+#define SDO 253
+#define SDONT 254
+#define IACMD 255
+
+#define OPT_BINARY 0
+#define OPT_ECHO 1
+#define OPT_RECONNECT 2
+#define OPT_SUPRESSGA 3
+#define OPT_MSGSIZE 4
+#define OPT_STATUS 5
+#define OPT_TIMINGMK 6
+#define OPT_RCTRANSECHO 7
+#define OPT_LINEWIDTH 8
+#define OPT_PAGESIZE 9
+#define OPT_OUTCRDIS 10
+#define OPT_OUTHTABS 11
+#define OPT_OUTHTABDIS 12
+#define OPT_OUTFFDIS 13
+#define OPT_OUTVTABS 14
+#define OPT_OUTVTABDIS 15
+#define OPT_OUTLFDIS 16
+#define OPT_EXTASCII 17
+#define OPT_LOGOUT 18
+#define OPT_BYTEMACRO 19
+#define OPT_DETERM 20
+#define OPT_SUPDUP 21
+#define OPT_SUPDUPOUT 22
+#define OPT_SENDLOC 23
+#define OPT_TERMTYPE 24
+#define OPT_EOREC 25
+#define OPT_TACACSUID 26
+#define OPT_OUTMK 27
+#define OPT_TERMLOCN 28
+#define OPT_TN3270R 29
+#define OPT_X3PAD 30
+#define OPT_WINSIZE 31
+#define OPT_TERMSPEED 32
+#define OPT_RFLOWCTRL 33
+#define OPT_LINEMODE 34
+#define OPT_XDISPLOC 35
+#define OPT_ENVVARS 36
+#define OPT_AUTH 37
+#define OPT_ENCRYPT 38
+#define OPT_NEWENV 39
+#define OPT_TN3270E 40
+#define OPT_XAUTH 41
+#define OPT_CHARSET 42
+#define OPT_TNRSP 43
+#define OPT_COMPORTCTRL 44
+#define OPT_SUPLOCALECHO 45
+#define OPT_STARTTLS 46
+#define OPT_KERMIT 47
+#define OPT_SENDURL 48
+#define OPT_FORWARDX 49
+#define OPT_PRAGMALOGON 138
+#define OPT_SSPILOGON 139
+#define OPT_PRAGMAHEARBEAT 140
+#define OPT_EXTENDOPT 255
+
+#define TERMTYPESEND 1
+
+#endif
