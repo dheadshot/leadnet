@@ -15,11 +15,12 @@ The server side consists of the following components:
   * LeadTlog Viewer - the program for viewing user's Tlogs.  This should be accessible from the Guest account.
 6. A gopher server - probably use QSelf (though it's freeware, not open-source) so it doesn't need to be built from scratch.  The gopher server offers another way to access Tlogs and any documents that users have made publicly available.  QSelf is probably the only gopher server with full CGI integration, so a script can be used to generate the menu-pages for various Tlogs.  These scripts *will* need to be written as part of the project.
 7. An FTP server - probably use an existing FTP server.  This is so users can access their documents directly if necessary.  They *will* be able to download their files using Telnet Binary transfer anyway, but this will provide another method to do so that will not require a special client.
+8. A File Manager - to choose which files are public, to delete files, to move and copy files, etc.  This could be made by the project-team or it could be a separate program.
 
 Possble other components to include server-side:
 
-8. LeadBBS - a Bulletin Board System so users can communicate and possibly discuss collaborations.
-9. LeadDirectory - a directory project consisting of:
+9. LeadBBS - a Bulletin Board System so users can communicate and possibly discuss collaborations.
+10. LeadDirectory - a directory project consisting of:
   * A Telnet Directory - a telnet accessible and searchable directory of other Telnet servers providing useful services.
   * A Gopher Directory - a gopher accessible and searchable (using type 7 scripts) directory of Telnet servers and gopher servers providing useful services.
 
