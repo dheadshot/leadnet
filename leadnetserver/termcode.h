@@ -5,7 +5,9 @@
 
 char Get_1PsCSI(unsigned long times, char endchar);
 char Get_2PsCSI(unsigned long times1, unsigned long times2, char endchar);
+char Get_3PsCSI(unsigned long times1, unsigned long times2, unsigned long times3, char endchar);
 char Get_1PsCSISel(unsigned long times, char endchar);
+char Get_3PsCSIGra(unsigned long times1, unsigned long times2, unsigned long times3, char endchar);
 char Get_ICH(unsigned long times);
 char Get_CUU(unsigned long times);
 char Get_CUD(unsigned long times);
@@ -32,6 +34,10 @@ char Get_SEL_All();
 char Get_IL(unsigned long times);
 char Get_DL(unsigned long times);
 char Get_DCH(unsigned long times);
-
+char Get_SU(unsigned long lines);
+char Get_SetGraphics(unsigned long item, unsigned long action, unsigned long value);
+char Get_SD(unsigned long lines)
+char Get_ECH(unsigned long chars)
+char Get_CBT(unsigned long stops)
 
 #endif
