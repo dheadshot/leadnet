@@ -50,4 +50,6 @@
 #define ESC_PM '^'
 #define ESC_APC '_'
 
+#define ESC_VT52NUM '?'
+
 #endif
