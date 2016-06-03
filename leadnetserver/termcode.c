@@ -292,8 +292,7 @@ char Get_2PsCSI(unsigned long times1, unsigned long times2, char endchar)
   return rets;
 }
 
-char Get_3PsCSI(unsigned long times1, unsigned long times2, 
-unsigned long times3, char endchar)
+char Get_3PsCSI(unsigned long times1, unsigned long times2, unsigned long times3, char endchar)
 {
   char *rets = (char *) malloc((FUNCLEN + 8 + 8 + 8 + 4) * sizeof(char));
   if (rets == NULL) return NULL;
@@ -471,3 +470,96 @@ char Get_CBT(unsigned long stops)
 {
   return Get_1PsCSI(stops, 'Z');
 }
+
+
+
+char Get_VT52_Cmd(char ACmd)
+{
+  char *rets = (char *) malloc(3 * sizeof(char));
+  
+  if (rets == NULL) return NULL;
+  sprintf(rets, "%c%c", ESC, ACmd);
+  return rets;
+}
+
+char Get_VT52_Move_Cursor(unsigned long X, unsigned long Y)
+{
+  char XChar = ((char) ((X & 255)+32));
+  char YChar = ((char) ((Y & 255)+32));
+  char *rets = (char *) malloc((FUNCLEN + 3) * sizeof(char));
+  
+  if (rets == NULL) return NULL;
+  sprintf(rets, "%cY%c%c", ESC, XChar, YChar);
+  return rets;
+}
+
+char Get_VT52_CUU()
+{
+  return Get_VT52_Cmd('A');
+}
+
+char Get_VT52_CUD()
+{
+  return Get_VT52_Cmd('B');
+}
+
+char Get_VT52_CUF()
+{
+  return Get_VT52_Cmd('C');
+}
+
+char Get_VT52_CUB()
+{
+  return Get_VT52_Cmd('D');
+}
+
+char Get_VT52_GMS()
+{
+  return Get_VT52_Cmd('F');
+}
+
+char Get_VT52_GME()
+{
+  return Get_VT52_Cmd('G');
+}
+
+char Get_VT52_CUH()
+{
+  return Get_VT52_Cmd('H');
+}
+
+char Get_VT52_RLF()
+{
+  return Get_VT52_Cmd('I');
+}
+
+char Get_VT52_ED_Below()
+{
+  return Get_VT52_Cmd('J');
+}
+
+char Get_VT52_EL_Below()
+{
+  return Get_VT52_Cmd('K');
+}
+
+char Get_VT52_DECID()
+{
+  return Get_VT52_Cmd('Z');
+}
+
+char Get_VT52_App()
+{
+  return Get_VT52_Cmd('=');
+}
+
+char Get_VT52_Num()
+{
+  return Get_VT52_Cmd('>');
+}
+
+char Get_VT52_VT100()
+{
+  return Get_VT52_Cmd('<');
+}
+

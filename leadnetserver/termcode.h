@@ -40,4 +40,21 @@ char Get_SD(unsigned long lines)
 char Get_ECH(unsigned long chars)
 char Get_CBT(unsigned long stops)
 
+char Get_VT52_Cmd(char ACmd);
+char Get_VT52_Move_Cursor(unsigned long X, unsigned long Y);
+char Get_VT52_CUU();
+char Get_VT52_CUD();
+char Get_VT52_CUF();
+char Get_VT52_CUB();
+char Get_VT52_GMS();
+char Get_VT52_GME();
+char Get_VT52_CUH();
+char Get_VT52_RLF();
+char Get_VT52_ED_Below();
+char Get_VT52_EL_Below();
+char Get_VT52_DECID();
+char Get_VT52_App();
+char Get_VT52_Num();
+char Get_VT52_VT100();
+
 #endif
